@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --hue: 233;
+    --ff-texting: 'Amita', Sans-Serif;
+    --ff-heading: 'Oleo Script', Sans-serif;
+    --bg-primary: hsl(var(--hue),91%,96%);
+    --fc-primary:  hsl(var(--hue),0%,100%);
+    --fc-secundary: hsl(var(--hue),50%,80%);
+    --fc-secundary-dark: hsl(var(--hue),100%,11%);
+    font-size: 62.5%;
+    --fs-body: 1.6rem;
+    --fs-h2: 2rem;
+    --fs-heading: 3.5rem;
+}
+body{
+    font-family: var(--ff-texting);
+    background-image: url('images/fundo.svg');
+    color: var(--fc-primary);
+    font-size: var(--fs-body);
+    background-size: cover;
+}
+header{
+    font-family: var(--ff-texting);
+    color: var(--fc-primary);
+    font-size: var(--fs-heading);
+    text-align: center;
+}
+main{
+    position: relative;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    padding: 10rem;
+}
+.grid img{
+    max-width:150px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+    left:0;
+}
+footer{
+    font-family: var(--ff-texting);
+    color: var(--fc-primary);
+    font-size: var(--fs-body);
+    position: relative;
+    text-align:left;
+    padding: 0 2rem;
+    bottom: 2rem;
+}
+#cf4 {
+    position:relative;
+    max-width:150px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+    padding: 50px 50px;
+  }
+  
+#cf4 img {
+    position:absolute;
+    left:0;
+  }
+  .top {
+    animation-name: fadetop;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+  }
+  .bottom {
+    animation-name: fadebottom;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+  }
+
+@keyframes fadetop {
+    0% {
+      opacity:1;
+    }
+    20%{
+      opacity: 0.8;
+    }
+    40% {
+      opacity:0.6;
+    }
+    60% {
+      opacity:0.4;
+    }
+    80% {
+      opacity:0.2;
+    }
+    100% {
+      opacity:0;
+    }
+}
+
+@keyframes fadebottom {
+    0% {
+      opacity:0;
+    }
+    20%{
+      opacity: 0.2;
+    }
+    40% {
+      opacity:0.4;
+    }
+    60% {
+      opacity:0.6;
+    }
+    80% {
+      opacity:0.8;
+    }
+    100% {
+      opacity:1;
+    }
+}
